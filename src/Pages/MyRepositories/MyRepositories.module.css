@@ -1,0 +1,14 @@
+.myRepositoriesContainer {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.myRepositoriesContainer__title {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+}
