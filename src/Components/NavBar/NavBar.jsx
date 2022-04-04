@@ -23,6 +23,12 @@ const Navbar = () => {
           My favorites repositories
         </Link>
       </li>
+      <li>
+        <Link className={style.navBar__link} to={"/login"}>
+          {" "}
+          Log out
+        </Link>
+      </li>
     </nav>
   );
 };
