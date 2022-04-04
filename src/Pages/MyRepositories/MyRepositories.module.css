@@ -1,14 +1,21 @@
 .myRepositoriesContainer {
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
-    margin: 2rem 0;
 }
 
 .myRepositoriesContainer__title {
     text-align: center;
     font-size: 2rem;
     color: #fff;
+    margin-bottom: 2rem;
+}
+
+.myRepositoriesContainer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2rem;
 }
