@@ -22,7 +22,6 @@ const UserView = () => {
         data.forEach(({ name, description, language, html_url }) => {
           repos.push({ name, description, language, repoURL: html_url });
         });
-
         addToRepositories(repos);
 
         Swal.fire({
@@ -33,7 +32,8 @@ const UserView = () => {
         setTimeout(() => {
           navigate("/userView/my-repositories");
         }, 3000);
-      });
+      })
+      .catch((err) => console.log(err));
   };
 
   return (

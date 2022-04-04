@@ -1,0 +1,47 @@
+.cardContainer {
+    width: 30%;
+    padding: 2rem;
+    margin: 1rem;
+    background-color: rgb(48, 102, 128);
+    border-radius: 1rem;
+}
+
+.cardContainer h2 {
+    color: yellowgreen;
+}
+
+.cardContainer p {
+    color: #fff;
+    text-align: justify;
+    margin: 1rem 0;
+}
+
+.cardContainer span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgb(216, 206, 66);
+}
+
+.cardContainer a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    margin: 0 2rem;
+}
+.cardContainer a:hover {
+    color: burlywood;
+}
+
+.cardContainer button {
+    background-color: burlywood;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cardContainer button:hover {
+    background-color: coral;
+}
