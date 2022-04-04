@@ -22,10 +22,20 @@ const useInitialState = () => {
     });
   };
 
+  const removeFromFavorites = (indexValue) => {
+    setState({
+      ...state,
+      favoritesRepositories: state.favoritesRepositories.filter(
+        (_, index) => index !== indexValue
+      ),
+    });
+  };
+
   return {
     state,
     addToRepositories,
     addToFavoriteRepositories,
+    removeFromFavorites,
   };
 };
 

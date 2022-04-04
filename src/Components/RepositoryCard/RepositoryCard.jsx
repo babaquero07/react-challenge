@@ -3,9 +3,10 @@ import UserContext from "../../Context/UserContext";
 import Swal from "sweetalert2";
 import style from "./RepositoryCard.module.css";
 
-const RepositoryCard = ({ repository }) => {
+const RepositoryCard = ({ repository, isFavorite, indexValue }) => {
   const { name, description, language, repoURL } = repository;
-  const { addToFavoriteRepositories } = useContext(UserContext);
+  const { addToFavoriteRepositories, removeFromFavorites } =
+    useContext(UserContext);
 
   const handleClick = (repository) => {
     addToFavoriteRepositories(repository);
@@ -31,12 +32,19 @@ const RepositoryCard = ({ repository }) => {
     <div className={style.cardContainer}>
       <h2>{name}</h2>
       <p>Description: {description}</p>
-
       <span>Keyword: {language}</span>
       <a href={repoURL} target="_blank">
         Github
       </a>
-      <button onClick={() => handleClick(repository)}>Add to favorites</button>
+      {!isFavorite ? (
+        <button onClick={() => handleClick(repository)}>
+          Add to favorites
+        </button>
+      ) : (
+        <button onClick={() => removeFromFavorites(indexValue)}>
+          Remove from favorites
+        </button>
+      )}
     </div>
   );
 };

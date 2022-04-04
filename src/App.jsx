@@ -6,6 +6,7 @@ import UserView from "./Pages/UserView/UserView";
 import useInitialState from "./Hooks/useInitialState";
 import UserContext from "./Context/UserContext";
 import MyRepositories from "./Pages/MyRepositories/MyRepositories";
+import MyFavorites from "./Pages/MyFavorites/MyFavorites";
 
 const App = () => {
   const initialState = useInitialState();
@@ -21,6 +22,11 @@ const App = () => {
             exact
             path="/userView/my-repositories"
             element={<MyRepositories />}
+          ></Route>
+          <Route
+            exact
+            path="/userView/my-favorites"
+            element={<MyFavorites />}
           ></Route>
           <Route exact path="*" element={<RegisterForm />}></Route>
         </Routes>
