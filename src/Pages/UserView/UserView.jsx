@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import UserContext from "../../Context/UserContext";
 import style from "./UserView.module.css";
 
-const axios = require("axios");
+import axios from "axios";
 
 const UserView = () => {
   const navigate = useNavigate();
