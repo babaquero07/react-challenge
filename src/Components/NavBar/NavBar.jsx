@@ -6,13 +6,19 @@ const Navbar = () => {
   return (
     <nav className={style.navBar}>
       <li>
-        <Link className={style.navBar__link} to={"/userView/myRepositories"}>
+        <Link className={style.navBar__link} to={"/userView"}>
+          {" "}
+          Home
+        </Link>
+      </li>
+      <li>
+        <Link className={style.navBar__link} to={"/userView/my-repositories"}>
           {" "}
           My repositories
         </Link>
       </li>
       <li>
-        <Link className={style.navBar__link} to={"/userView/myfavorites"}>
+        <Link className={style.navBar__link} to={"/userView/my-favorites"}>
           {" "}
           My favorites repositories
         </Link>

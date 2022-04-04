@@ -1,5 +1,5 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import style from "./RegisterForm.module.css";
@@ -108,6 +108,10 @@ const RegisterForm = () => {
       <button className={style.registerButton} type="submit">
         Register
       </button>
+      <div>
+        You already have an account?
+        <Link to={"/login"}> Log in</Link>
+      </div>
     </form>
   );
 };

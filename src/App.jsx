@@ -5,6 +5,8 @@ import RegisterForm from "./Components/RegisterForm/RegisterForm";
 import UserView from "./Pages/UserView/UserView";
 import useInitialState from "./Hooks/useInitialState";
 import UserContext from "./Context/UserContext";
+import MyRepositories from "./Pages/MyRepositories/MyRepositories";
+import MyFavorites from "./Pages/MyFavorites/MyFavorites";
 
 const App = () => {
   const initialState = useInitialState();
@@ -16,6 +18,16 @@ const App = () => {
           <Route exact path="/register" element={<RegisterForm />}></Route>
           <Route exact path="/login" element={<LoginForm />}></Route>
           <Route exact path="/userView" element={<UserView />}></Route>
+          <Route
+            exact
+            path="/userView/my-repositories"
+            element={<MyRepositories />}
+          ></Route>
+          <Route
+            exact
+            path="/userView/my-favorites"
+            element={<MyFavorites />}
+          ></Route>
           <Route exact path="*" element={<RegisterForm />}></Route>
         </Routes>
       </BrowserRouter>
