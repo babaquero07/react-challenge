@@ -17,7 +17,7 @@ const UserView = () => {
     const { gitHubUserName } = user;
 
     axios
-      .get(`http://api.github.com/users/${gitHubUserName}/repos`)
+      .get(`https://api.github.com/users/${gitHubUserName}/repos`)
       .then(({ data }) => {
         data.forEach(({ name, description, language, html_url }) => {
           repos.push({ name, description, language, repoURL: html_url });
