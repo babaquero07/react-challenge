@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import UserContext from "../../Context/UserContext";
+import Swal from "sweetalert2";
 import style from "./RepositoryCard.module.css";
 
 const RepositoryCard = ({ repository }) => {
@@ -8,7 +9,24 @@ const RepositoryCard = ({ repository }) => {
 
   const handleClick = (repository) => {
     addToFavoriteRepositories(repository);
+
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Repository added to favorites",
+    });
   };
+
   return (
     <div className={style.cardContainer}>
       <h2>{name}</h2>
