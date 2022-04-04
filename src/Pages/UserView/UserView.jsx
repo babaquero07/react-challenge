@@ -31,7 +31,7 @@ const UserView = () => {
         });
 
         setTimeout(() => {
-          navigate("/userView/myRepositories");
+          navigate("/userView/my-repositories");
         }, 3000);
       });
   };
