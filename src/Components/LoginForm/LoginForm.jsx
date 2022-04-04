@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { useFormik } from "formik";
@@ -36,7 +36,7 @@ const LoginForm = () => {
           title: "Signed in successfully",
         });
         setTimeout(() => {
-          navigate("/viewClient");
+          navigate("/userView");
         }, 3020);
       } else {
         Swal.fire({
